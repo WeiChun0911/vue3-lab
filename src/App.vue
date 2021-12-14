@@ -1,20 +1,22 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+<template>  
+  <router-link class="routerLink" to="/case1" v-if="!['/case1'].includes($route.path)"> Go to case1 </router-link>
+  <router-link class="routerLink" to="/case2" v-if="!['/case2'].includes($route.path)"> Go to case2 </router-link>
+  <router-view></router-view>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
 <style>
+.routerLink{
+  display: inline-block;
+  margin: 2em 1em;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
