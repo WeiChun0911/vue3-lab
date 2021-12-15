@@ -1,39 +1,42 @@
 <template>
-  <newSolution v-model="msgAInParent"></newSolution>
-  <br>
-  <div>{{msgAInParent}}</div>
+  <newSolution v-model:testing="msgAInParent"></newSolution>
+  <br />
+  <div>{{ msgAInParent }}</div>
   <p>By using v-model, you can modify massage from child's input field.</p>
   <p>It's more like a "Syntactic sugar"</p>
-  <hr>
+  <hr />
 
-  <oldSolution v-bind:msgBInParent="msgBInParent" @whatEverEventNameYouWant="msgBOnChange"></oldSolution>
-  <br>
-  <div>{{msgBInParent}}</div>
+  <oldSolution
+    v-bind:msgBInParent="msgBInParent"
+    @whatEverEventNameYouWant="msgBOnChange"
+  ></oldSolution>
+  <br />
+  <div>{{ msgBInParent }}</div>
   <p>In fact, Vue automatically interpret your code into this way.</p>
 </template>
 
 <script>
-import newSolution from './newSolution.vue'
-import oldSolution from './oldSolution.vue'
+import newSolution from "./newSolution.vue";
+import oldSolution from "./oldSolution.vue";
 
 export default {
-  name: 'App',
-  data(){
+  name: "App",
+  data() {
     return {
       msgAInParent: "Value A from parent",
-      msgBInParent: "Value B from parent"
-    }
+      msgBInParent: "Value B from parent",
+    };
   },
   methods: {
-    msgBOnChange: function(val){
+    msgBOnChange: function (val) {
       this.msgBInParent = val;
-    }
+    },
   },
   components: {
     newSolution,
-    oldSolution
-  }
-}
+    oldSolution,
+  },
+};
 </script>
 
 <style>

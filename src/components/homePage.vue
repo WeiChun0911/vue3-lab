@@ -1,15 +1,13 @@
-
-<template>  
-  <img src="../assets/logo.png" alt="">
-  <p>Vue 3 Lab</p> 
+<template>
+  <img src="../assets/logo.png" alt="" />
+  <p>Vue 3 Lab</p>
 </template>
 
 <script>
 export default {
-  name: 'homePage',
-}
+  name: "homePage",
+};
 </script>
-
 
 <style scoped>
 img {
