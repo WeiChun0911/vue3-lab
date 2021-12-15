@@ -20,27 +20,34 @@
   >
     Go to case3
   </router-link>
+  <router-link
+    class="routerLink"
+    to="/case4"
+    v-if="!['/case4'].includes($route.path)"
+  >
+    Go to case4
+  </router-link>
   <router-view></router-view>
 </template>
 
 <script>
-export default {
-  name: "App",
-};
+  export default {
+    name: "App",
+  };
 </script>
 
 <style>
-.routerLink {
-  display: inline-block;
-  margin: 2em 1em;
-}
+  .routerLink {
+    display: inline-block;
+    margin: 2em 1em;
+  }
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>
